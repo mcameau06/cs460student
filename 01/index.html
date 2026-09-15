@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS460 - Hello Cube (XTK)</title>
+    <style>
+      html,
+      body {
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden !important;
+      }
+    </style>
+    <!-- Include XTK library -->
+    <script
+      type="text/javascript"
+      src="https://get.goXTK.com/xtk_edge.js"
+    ></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        // 1. Create a 3D renderer and initialize it
+        var r = new X.renderer3D();
+        r.init();
+
+        // 2. Create a 3D cube object
+        var cube = new X.cube();
+
+        // 3. Add the cube to the renderer
+        r.add(cube);
+
+        // 4. Render the scene (built-in mouse interaction: rotate, pan, zoom)
+        r.render();
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
+
